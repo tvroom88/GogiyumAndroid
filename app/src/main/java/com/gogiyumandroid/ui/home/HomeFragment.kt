@@ -32,12 +32,9 @@ class HomeFragment : Fragment() {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
-
-
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val tableLayout = root.findViewById<TableLayout>(R.id.TableLayout1)
 
-//        tableRow = root.findViewById<TableRow>(R.id.table_row1)
         readData(myGogiyumAddress, tableLayout)
 
         return root
@@ -68,18 +65,15 @@ class HomeFragment : Fragment() {
             val jsonObject = jsonArray.getJSONObject(i)
                 val tableRows = TableRow(activity)
                 layoutInflater.inflate(R.layout.custom_table_row, tableRows, true)
-                tableRows.textView4.text = jsonObject.getString("name")
+                tableRows.foodImageKName.text = jsonObject.getString("name")
+                tableRows.foodImageEName.text = " (" + jsonObject.getString("e_name") + ")"
 
                 val imageUrl = jsonObject.getString("image")
                 val ivImage : ImageView = tableRows.imageView1
                 Glide.with(this).load(imageUrl).into(ivImage)
                 tableLayout.addView(tableRows)
-
         }
     }
 
 }
-
-
-
 
