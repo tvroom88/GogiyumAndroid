@@ -1,6 +1,5 @@
 package com.gogiyumandroid.RestaurantAdapter
 
-//class RestaurantAdapter(val _name: String, val _address: String, val _foods: Array<String> ) {
 class RestaurantAdapter(val _name: String, val _address: String, val _yrating: Double, val _grating: Double,
                         val _uberURL: String, val _gruhub: String, val _doordash: String) {
     val resName: String = _name //restaurantName

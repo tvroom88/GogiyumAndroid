@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-//https://gogiyum.com/food.json
 
 
 

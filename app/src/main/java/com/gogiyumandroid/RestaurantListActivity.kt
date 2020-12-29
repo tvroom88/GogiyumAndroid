@@ -18,8 +18,6 @@ import okhttp3.*
 import org.json.JSONArray
 import java.net.URL
 
-
-@Suppress("DEPRECATION")
 class RestaurantListActivity : AppCompatActivity() {
     private var task: RestaurantReadTask? = null
 

@@ -20,13 +20,11 @@ import okhttp3.*
 import org.json.JSONArray
 import java.io.IOException
 
+const val MY_GOGIYUM_URL = "https://gogiyum.com/api/menu"
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-    private val myGogiyumAddress = "https://gogiyum.com/api/menu"
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,7 +37,7 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val tableLayout = root.findViewById<TableLayout>(R.id.TableLayout1)
 
-        readFirstData(myGogiyumAddress, tableLayout)
+        readFirstData(MY_GOGIYUM_URL, tableLayout)
 
         return root
     }
